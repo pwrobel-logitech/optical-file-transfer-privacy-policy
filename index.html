@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Optical File Transfer - Privacy Policy</title>
+  <title>Optical File Transfer - Privacy Policy / 隐私政策</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -32,12 +32,17 @@
       line-height: 1.6;
     }
     main {
-      max-width: 840px;
+      max-width: 880px;
       margin: 0 auto;
-      padding: 32px 20px 48px;
+      padding: 32px 20px 56px;
     }
-    h1, h2 {
+    h1, h2, h3 {
       line-height: 1.25;
+    }
+    h2 {
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
     }
     .meta, .note {
       color: var(--muted);
@@ -47,6 +52,13 @@
       border: 1px solid var(--border);
       border-radius: 12px;
       padding: 18px 20px;
+      margin: 20px 0;
+    }
+    .language-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 16px 0 24px;
     }
     a {
       color: var(--link);
@@ -55,68 +67,167 @@
 </head>
 <body>
   <main>
-    <h1>Privacy Policy</h1>
-    <p class="meta">Application: Optical File Transfer</p>
-    <p class="meta">Last updated: 2026-04-21</p>
+    <h1>Optical File Transfer 隐私政策 / Privacy Policy</h1>
+    <p class="meta">应用名称 / Application: Optical File Transfer</p>
+    <p class="meta">开发者 / Developer: Pawel Wrobel</p>
+    <p class="meta">最后更新日期 / Last updated: 2026-05-02</p>
 
-    <div class="card">
+    <nav class="language-nav" aria-label="Language navigation">
+      <a href="#zh-cn">简体中文</a>
+      <a href="#en">English</a>
+      <a href="zh-cn/">简体中文单独页面</a>
+    </nav>
+
+    <section id="zh-cn" lang="zh-CN">
+      <h2>简体中文</h2>
+
+      <div class="card">
+        <p>
+          Optical File Transfer 是一款通过 QR 图像帧流在本地传输文件的应用。
+          本应用设计为离线工作，核心文件传输功能不需要网络访问，也不会与开发者服务器通信。
+        </p>
+      </div>
+
+      <h3>数据收集</h3>
       <p>
-        Optical File Transfer is designed to transfer files locally using streams of QR frames.
-        The application does not collect personal data and does not require network access for
-        the core file transfer workflow.
+        本应用不会收集、出售或共享用户的个人数据。正常使用过程中，本应用不会把文件内容、
+        个人信息或传输内容发送给开发者服务器。
       </p>
-    </div>
 
-    <h2>Data collection</h2>
-    <p>
-      This application does not collect, sell, or share personal data with the developer.
-      It does not send file contents or personal information to the developer's servers as part
-      of normal use.
-    </p>
+      <h3>应用使用的权限</h3>
+      <p>本应用仅在用户主动使用相关功能时请求和使用以下权限：</p>
+      <ul>
+        <li>
+          <strong>相机权限</strong> - 仅在下载/接收模式中用于扫描 QR 图像帧流，并根据这些帧重建接收到的文件。
+        </li>
+        <li>
+          <strong>文件或存储访问</strong> - 仅用于选择要发送的文件、读取用户选择的文件，以及保存接收到的文件。
+        </li>
+        <li>
+          <strong>相机前台服务</strong> - 由于光学文件传输可能持续较长时间，下载/接收模式可能需要让相机在用户主动开始的接收会话中保持运行。
+          本应用仅在用户进入接收模式后使用带有常驻通知的相机前台服务，以便 Android 保持接收器运行。
+          当用户停止接收模式或接收会话结束时，该服务会停止。
+        </li>
+      </ul>
 
-    <h2>Permissions used by the app</h2>
-    <p>The app may request the following permissions only for features directly used by the user:</p>
-    <ul>
-      <li><strong>Camera</strong> - to capture QR frame streams during optical file transfer.</li>
-      <li><strong>File or storage access</strong> - to open, import, receive, and save transferred files.</li>
-      <li><strong>Modify system settings</strong> - only to temporarily adjust screen brightness during transfer and then restore it.</li>
-      <li><strong>Foreground service (camera)</strong> - to keep an active camera-based receive session alive while it is visibly ongoing for the user.</li>
-    </ul>
+      <h3>上传/发送模式中的屏幕使用</h3>
+      <p>
+        在上传/发送模式中，本应用会在屏幕上显示动态 QR 图像帧流，供另一台设备的相机扫描。
+        长时间传输时，屏幕可能保持常亮，并且本应用窗口可能临时使用较高亮度，以便接收端相机更容易读取 QR 码。
+        这是当前应用窗口的亮度设置；本应用不会请求或使用“修改系统设置”权限。
+      </p>
 
-    <h2>Advertising and analytics</h2>
-    <p>
-      Optical File Transfer does not use the Android advertising ID for advertising or analytics.
-      The app is intended to work offline and is not designed around ad tracking.
-    </p>
+      <h3>广告和分析</h3>
+      <p>
+        Optical File Transfer 不使用 Android 广告 ID 进行广告或分析。
+        本应用不是基于广告跟踪设计的应用。
+      </p>
 
-    <h2>Files and local processing</h2>
-    <p>
-      Files selected or received by the user are processed locally on the device in order to
-      perform file transfer. The app uses local storage only to read, reconstruct, and save files
-      involved in the transfer.
-    </p>
+      <h3>文件和本地处理</h3>
+      <p>
+        用户选择或接收的文件仅在设备本地处理，用于执行文件传输、重建文件和保存文件。
+        本应用不会为其他目的扫描、上传或共享这些文件。
+      </p>
 
-    <h2>Third-party apps and links</h2>
-    <p>
-      The app can open files or links using external applications chosen by the user. When that
-      happens, those external applications are governed by their own privacy policies.
-    </p>
+      <h3>第三方应用和外部链接</h3>
+      <p>
+        本应用可以根据用户选择，请求其他应用打开文件或链接。
+        在这种情况下，只会向外部应用传递完成该操作所需的文件/链接信息和 MIME 类型。
+        外部应用或外部网站受其自身隐私政策约束。
+      </p>
 
-    <h2>Children's privacy</h2>
-    <p>
-      The app is not intended to collect personal data from children or from any other users.
-    </p>
+      <h3>儿童隐私</h3>
+      <p>
+        本应用不会有意收集儿童或任何其他用户的个人数据。
+      </p>
 
-    <h2>Changes to this policy</h2>
-    <p>
-      This privacy policy may be updated if app behavior changes. The latest version will be
-      published at this URL.
-    </p>
+      <h3>政策变更</h3>
+      <p>
+        如果应用行为发生变化，本隐私政策可能会更新。最新版本会发布在此页面。
+      </p>
 
-    <p class="note">
-      If you have questions about this privacy policy, please use the contact details provided in
-      the app listing or developer profile.
-    </p>
+      <p class="note">
+        如果你对本隐私政策有疑问，请通过应用商店页面或开发者资料中提供的联系方式联系开发者。
+      </p>
+    </section>
+
+    <section id="en" lang="en">
+      <h2>English</h2>
+
+      <div class="card">
+        <p>
+          Optical File Transfer is designed to transfer files locally using streams of QR frames.
+          The application is designed to work offline. The core file transfer workflow does not
+          require network access and does not communicate with developer servers.
+        </p>
+      </div>
+
+      <h3>Data collection</h3>
+      <p>
+        This application does not collect, sell, or share personal data. During normal use,
+        it does not send file contents, personal information, or transfer contents to developer servers.
+      </p>
+
+      <h3>Permissions used by the app</h3>
+      <p>The app may request and use the following permissions only for features directly started by the user:</p>
+      <ul>
+        <li>
+          <strong>Camera</strong> - used only in download/receive mode to scan QR frame streams and reconstruct the received file.
+        </li>
+        <li>
+          <strong>File or storage access</strong> - used only to select files for sending, read files selected by the user, and save received files.
+        </li>
+        <li>
+          <strong>Foreground service (camera)</strong> - optical file transfers can take a long time, so download/receive mode may need to keep the camera running during a user-started receive session.
+          The app uses a camera foreground service with a persistent notification only after the user enters receive mode, so Android can keep the receiver running.
+          The service stops when the user stops receive mode or the receive session ends.
+        </li>
+      </ul>
+
+      <h3>Screen use in upload/send mode</h3>
+      <p>
+        In upload/send mode, the app displays the selected file as an animated QR frame stream on the screen
+        so another device can scan it with its camera. During long transfers, the screen may be kept on and
+        this app window may temporarily use higher brightness to make QR codes easier for the receiving camera
+        to read. This is a brightness setting for the current app window; the app does not request or use the
+        Modify system settings permission.
+      </p>
+
+      <h3>Advertising and analytics</h3>
+      <p>
+        Optical File Transfer does not use the Android advertising ID for advertising or analytics.
+        The app is not designed around ad tracking.
+      </p>
+
+      <h3>Files and local processing</h3>
+      <p>
+        Files selected or received by the user are processed locally on the device in order to perform
+        file transfer, reconstruct files, and save files. The app does not scan, upload, or share those
+        files for any other purpose.
+      </p>
+
+      <h3>Third-party apps and external links</h3>
+      <p>
+        The app can ask other applications to open files or links selected by the user. When this happens,
+        only the file/link information and MIME type required for that action are passed to the external app.
+        External apps and external websites are governed by their own privacy policies.
+      </p>
+
+      <h3>Children's privacy</h3>
+      <p>
+        The app is not intended to collect personal data from children or from any other users.
+      </p>
+
+      <h3>Changes to this policy</h3>
+      <p>
+        This privacy policy may be updated if app behavior changes. The latest version will be published at this page.
+      </p>
+
+      <p class="note">
+        If you have questions about this privacy policy, please use the contact details provided in
+        the app listing or developer profile.
+      </p>
+    </section>
   </main>
 </body>
 </html>
