@@ -110,7 +110,7 @@
         </li>
         <li>
           <strong>前台相机使用</strong> - 下载/接收模式仅在本应用位于前台并可见时使用相机。
-          当应用暂停或移到后台时，摄像头会被释放，因此 Android 的摄像头隐私指示器应当消失。
+          当应用不再可见或移到后台时，摄像头会被释放，因此 Android 的摄像头隐私指示器应当消失。
           本应用不会运行相机前台服务，也不会保留相机常驻通知。
         </li>
       </ul>
@@ -184,7 +184,7 @@
         </li>
         <li>
           <strong>Foreground-only camera use</strong> - download/receive mode uses the camera only while this app is visible in the foreground.
-          The camera is released when the app is paused or moved to the background, so Android's camera privacy indicator should disappear.
+          The camera is released when the app is no longer visible or is moved to the background, so Android's camera privacy indicator should disappear.
           The app does not run a camera foreground service or keep a persistent camera notification.
         </li>
       </ul>
@@ -245,7 +245,7 @@
       <p>
         由於光學傳輸可能需要很長時間，下載/接收模式和上傳/傳送模式都是由使用者主動開始的前景傳輸模式。
         在下載/接收模式中，相機權限僅在應用位於前景並可見時用於掃描 QR 幀並重建收到的檔案。
-        當應用暫停或移到背景時，相機會被釋放，因此 Android 的相機隱私指示器應會消失。本應用不會執行相機前景服務，也不會保留相機持續通知。
+        當應用不再可見或移到背景時，相機會被釋放，因此 Android 的相機隱私指示器應會消失。本應用不會執行相機前景服務，也不會保留相機持續通知。
       </p>
       <p>
         檔案/儲存空間存取僅用於選擇要傳送的檔案、讀取使用者選擇的檔案，以及把接收到的檔案儲存到裝置。
@@ -276,7 +276,7 @@
       <p>
         Ponieważ transmisje optyczne mogą trwać długo, tryb pobierania/odbioru oraz tryb wysyłania/nadawania są trybami transmisji pierwszoplanowej uruchamianymi przez użytkownika.
         W trybie pobierania/odbioru dostęp do kamery służy wyłącznie do skanowania klatek QR i odtworzenia odebranego pliku, gdy aplikacja jest widoczna na pierwszym planie.
-        Kamera jest zwalniana, gdy aplikacja zostanie wstrzymana albo przeniesiona do tła, więc wskaźnik prywatności kamery Androida powinien zniknąć. Aplikacja nie uruchamia pierwszoplanowej usługi kamery ani nie utrzymuje stałego powiadomienia kamery.
+        Kamera jest zwalniana, gdy aplikacja przestaje być widoczna albo zostanie przeniesiona do tła, więc wskaźnik prywatności kamery Androida powinien zniknąć. Aplikacja nie uruchamia pierwszoplanowej usługi kamery ani nie utrzymuje stałego powiadomienia kamery.
       </p>
       <p>
         Dostęp do plików/pamięci służy wyłącznie do wybierania plików do wysłania, odczytywania plików wybranych przez użytkownika oraz zapisywania plików odebranych na urządzeniu.
@@ -309,7 +309,7 @@
       <p>
         Como as transferências ópticas podem demorar bastante, o modo de download/recebimento e o modo de upload/envio são modos de transferência em primeiro plano iniciados pelo usuário.
         No modo de download/recebimento, o acesso à câmera é usado apenas para escanear quadros QR e reconstruir o arquivo recebido enquanto o aplicativo está visível em primeiro plano.
-        A câmera é liberada quando o aplicativo é pausado ou movido para segundo plano, portanto o indicador de privacidade da câmera do Android deve desaparecer. O aplicativo não executa um serviço em primeiro plano da câmera nem mantém uma notificação persistente da câmera.
+        A câmera é liberada quando o aplicativo deixa de estar visível ou é movido para segundo plano, portanto o indicador de privacidade da câmera do Android deve desaparecer. O aplicativo não executa um serviço em primeiro plano da câmera nem mantém uma notificação persistente da câmera.
       </p>
       <p>
         O acesso a arquivos/armazenamento é usado apenas para selecionar arquivos para envio, ler os arquivos selecionados pelo usuário e salvar os arquivos recebidos no dispositivo.
@@ -342,7 +342,7 @@
       <p>
         Поскольку оптическая передача может занимать много времени, режим загрузки/приема и режим отправки/передачи являются режимами передачи на переднем плане, запускаемыми пользователем.
         В режиме загрузки/приема доступ к камере используется только для сканирования QR-кадров и восстановления принятого файла, пока приложение видно на переднем плане.
-        Камера освобождается, когда приложение приостанавливается или переводится в фон, поэтому индикатор конфиденциальности камеры Android должен исчезнуть. Приложение не запускает службу переднего плана камеры и не держит постоянное уведомление камеры.
+        Камера освобождается, когда приложение больше не видно или оно переводится в фон, поэтому индикатор конфиденциальности камеры Android должен исчезнуть. Приложение не запускает службу переднего плана камеры и не держит постоянное уведомление камеры.
       </p>
       <p>
         Доступ к файлам/хранилищу используется только для выбора файлов для отправки, чтения выбранных пользователем файлов и сохранения принятых файлов на устройстве.
@@ -375,7 +375,7 @@
       <p>
         光学転送には長時間かかることがあるため、ダウンロード/受信モードとアップロード/送信モードはいずれもユーザーが開始するフォアグラウンド転送モードです。
         ダウンロード/受信モードでは、アプリがフォアグラウンドで表示されている間だけ、カメラアクセスは QR フレームをスキャンして受信ファイルを復元するために使用されます。
-        アプリが一時停止されたりバックグラウンドに移動したりするとカメラは解放されるため、Android のカメラプライバシーインジケーターは消えるはずです。このアプリはカメラ用フォアグラウンドサービスを実行せず、カメラの常時通知も維持しません。
+        アプリが表示されなくなったりバックグラウンドに移動したりするとカメラは解放されるため、Android のカメラプライバシーインジケーターは消えるはずです。このアプリはカメラ用フォアグラウンドサービスを実行せず、カメラの常時通知も維持しません。
       </p>
       <p>
         ファイル/ストレージアクセスは、送信するファイルの選択、ユーザーが選択したファイルの読み取り、受信したファイルの端末への保存にのみ使用されます。
